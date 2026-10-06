@@ -11,3 +11,6 @@ Aplicație web simplă pentru gestionarea sarcinilor.
 - ## Versiunea 1.0
 
 Proiectul a fost gestionat utilizând Git și GitHub.
+## Autor
+
+Bantus Denis
