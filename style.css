@@ -35,3 +35,7 @@ footer {
     padding: 20px;
     border-top: 1px solid #ccc;
 }
+
+button:hover {
+    transform: scale(1.05);
+}
