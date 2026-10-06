@@ -39,3 +39,7 @@ footer {
 button:hover {
     transform: scale(1.05);
 }
+.dark-mode {
+    background: #222;
+    color: white;
+}
