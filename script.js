@@ -7,6 +7,9 @@ button.addEventListener("click", function () {
 
     const task = document.createElement("li");
     task.textContent = input.value;
+task.addEventListener("click", function () {
+    task.style.textDecoration = "line-through";
+});
 
     list.appendChild(task);
     input.value = "";
