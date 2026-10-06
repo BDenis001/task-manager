@@ -14,3 +14,9 @@ task.addEventListener("click", function () {
     list.appendChild(task);
     input.value = "";
 });
+
+const darkModeButton = document.getElementById("darkMode");
+
+darkModeButton.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+});
