@@ -4,45 +4,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
+    <meta name="theme-color" content="#f5f6ff">
+    <title>TaskFlow — Organizează-ți ziua</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Task Manager</h1>
-        <p>Gestionarea simplă a sarcinilor</p>
+    <header class="topbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">✓</span>
+            TaskFlow<span class="brand-dot">.</span>
+        </a>
+
+        <nav>
+            <a href="#" class="nav-link active">Acasă</a>
+            <a href="#taskSection" class="nav-link">Sarcinile mele</a>
+            <a href="#about" class="nav-link">Despre</a>
+        </nav>
+
+        <button id="darkMode" class="theme-button" type="button"
+                aria-label="Schimbă tema">
+            ☾ <span>Temă</span>
+        </button>
     </header>
 
-    <nav>
-        <a href="#">Acasă</a>
-        <a href="#taskSection">Sarcini</a>
-        <a href="#about">Despre</a>
-    </nav>
+    <main class="container" id="taskSection">
+        <section class="welcome">
+            <div>
+                <span class="eyebrow">SPAȚIUL TĂU DE PRODUCTIVITATE</span>
+                <h1>Mai puțin haos.<br><span>Mai mult progres.</span></h1>
+                <p>Organizează-ți ziua, concentrează-te pe ce contează
+                   și bucură-te de fiecare reușită.</p>
+            </div>
 
-    <main id="taskSection">
-        <h2>Lista mea de sarcini</h2>
+            <div class="welcome-art" aria-hidden="true">
+                <div class="art-circle">
+                    <span class="art-check">✓</span>
+                    <span class="art-star star-one">✦</span>
+                    <span class="art-star star-two">✧</span>
+                </div>
+            </div>
+        </section>
 
-        <div class="task-form">
-            <input type="text" id="taskInput" placeholder="Introdu o sarcină">
-            <button id="addTask">Adaugă</button>
-        </div>
+        <section class="dashboard">
+            <div class="stat-card">
+                <div class="stat-icon purple">▤</div>
+                <span class="stat-label">Toate sarcinile</span>
+                <strong id="totalStat">0</strong>
+                <span class="stat-note">Sarcini în lista ta</span>
+            </div>
 
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">Toate</button>
-            <button class="filter-btn" data-filter="active">Active</button>
-            <button class="filter-btn" data-filter="completed">Finalizate</button>
-        </div>
+            <div class="stat-card">
+                <div class="stat-icon orange">◷</div>
+                <span class="stat-label">În desfășurare</span>
+                <strong id="activeStat">0</strong>
+                <span class="stat-note">Încă te așteaptă</span>
+            </div>
 
-        <p id="taskCounter">Număr de sarcini: 0</p>
-        <ul id="taskList"></ul>
+            <div class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <span class="stat-label">Finalizate</span>
+                <strong id="completedStat">0</strong>
+                <span class="stat-note">Pași înainte</span>
+            </div>
+        </section>
 
-        <button id="darkMode">Dark Mode</button>
+        <section class="task-panel">
+            <div class="panel-heading">
+                <div>
+                    <span class="eyebrow">PLANUL TĂU</span>
+                    <h2>Lista de sarcini</h2>
+                    <p>Fiecare lucru mic te duce mai aproape de obiectiv.</p>
+                </div>
+                <span class="today-badge">✦ Zi productivă</span>
+            </div>
+
+            <form class="task-form" id="taskForm">
+                <span class="input-icon">＋</span>
+                <input type="text" id="taskInput"
+                       placeholder="Ce ai de făcut astăzi?"
+                       aria-label="Introdu o sarcină"
+                       maxlength="150">
+                <button id="addTask" type="submit">
+                    <span>＋</span> Adaugă sarcina
+                </button>
+            </form>
+
+            <div class="list-toolbar">
+                <div class="filters" aria-label="Filtrează sarcinile">
+                    <button class="filter-btn active" data-filter="all"
+                            type="button">Toate</button>
+                    <button class="filter-btn" data-filter="active"
+                            type="button">Active</button>
+                    <button class="filter-btn" data-filter="completed"
+                            type="button">Finalizate</button>
+                </div>
+                <span class="list-caption" id="taskCounter">
+                    0 sarcini
+                </span>
+            </div>
+
+            <ul id="taskList" aria-live="polite"></ul>
+        </section>
+
+        <section class="motivation">
+            <div class="motivation-icon">✦</div>
+            <div>
+                <strong>Progresul contează, nu perfecțiunea.</strong>
+                <p>Începe cu o sarcină. Restul vine pas cu pas.</p>
+            </div>
+        </section>
     </main>
 
     <footer id="about">
-        <p>&copy; 2026 Task Manager. Toate drepturile rezervate.</p>
+        <a href="#" class="brand footer-brand">
+            <span class="brand-icon">✓</span>
+            TaskFlow<span class="brand-dot">.</span>
+        </a>
+        <p>Creat pentru zile mai organizate. © 2026</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
