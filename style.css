@@ -43,3 +43,73 @@ button:hover {
     background: #222;
     color: white;
 }
+
+
+/* Formularul de adaugare a sarcinilor */
+.task-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.task-form input {
+    padding: 10px;
+    max-width: 350px;
+    width: 100%;
+}
+
+/* Filtre */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.filter-btn.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Lista sarcinilor */
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px;
+    margin: 10px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    list-style: none;
+}
+
+#taskList li span {
+    flex: 1;
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+#taskList button {
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .task-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-form button {
+        width: 100%;
+        max-width: 350px;
+    }
+}
