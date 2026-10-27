@@ -15,5 +15,3 @@
 - CSS
 - JavaScript
 - Git si GitHub
-
-Test temporar pentru demonstrarea anularii.
