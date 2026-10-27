@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -7,31 +8,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>Task Manager</h1>
         <p>Gestionarea simplă a sarcinilor</p>
     </header>
+
     <nav>
-    <a href="#">Acasă</a>
-    <a href="#">Sarcini</a>
-    <a href="#">Despre</a>
+        <a href="#">Acasă</a>
+        <a href="#taskSection">Sarcini</a>
+        <a href="#about">Despre</a>
     </nav>
 
-    <main>
-        <input type="text" id="taskInput" placeholder="Introdu o sarcină">
-        <button id="addTask">Adaugă</button>
+    <main id="taskSection">
+        <h2>Lista mea de sarcini</h2>
 
+        <div class="task-form">
+            <input type="text" id="taskInput" placeholder="Introdu o sarcină">
+            <button id="addTask">Adaugă</button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Toate</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Finalizate</button>
+        </div>
+
+        <p id="taskCounter">Număr de sarcini: 0</p>
         <ul id="taskList"></ul>
+
         <button id="darkMode">Dark Mode</button>
     </main>
 
-    <h2>Lista mea de sarcini</h2>
-    <p id="taskCounter">Număr de sarcini: 0</p>
+    <footer id="about">
+        <p>&copy; 2026 Task Manager. Toate drepturile rezervate.</p>
+    </footer>
 
     <script src="script.js"></script>
-    <footer>
-    <p>&copy; 2026 Task Manager. Toate drepturile rezervate.</p>
-</footer>
 </body>
 </html>
