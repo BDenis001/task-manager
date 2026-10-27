@@ -1,16 +1,17 @@
-# Task Manager
 
-Aplicație web simplă pentru gestionarea sarcinilor.
+## Functionalitati noi
 
-## Funcționalități
+- Adaugarea sarcinilor in lista.
+- Marcarea sarcinilor ca finalizate.
+- Redeschiderea sarcinilor finalizate.
+- Filtrarea sarcinilor dupa stare: toate, active si finalizate.
+- Afisarea numarului de sarcini active si finalizate.
+- Stergerea sarcinilor din lista.
+- Activarea si dezactivarea modului intunecat.
 
-- Adăugarea sarcinilor
-- Afișarea sarcinilor
-- Interfață simplă și intuitivă
+## Tehnologii utilizate
 
-- ## Versiunea 1.0
-
-Proiectul a fost gestionat utilizând Git și GitHub.
-## Autor
-
-Bantus Denis
+- HTML
+- CSS
+- JavaScript
+- Git si GitHub
