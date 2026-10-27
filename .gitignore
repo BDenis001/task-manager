@@ -1,5 +1,28 @@
+
+# Setari locale VS Code
 .vscode/
+
+# Fisiere log
 *.log
+logs/
+
+# Dependinte
 node_modules/
+
+# Fisiere temporare
+*.tmp
+*.temp
+
+# Configurari locale
+.env
+.env.local
+
+# Fisiere generate
+dist/
+coverage/
+
+# Fisiere de test ignorate
 test.txt
-task.manager-copy/
+
+# Copie locala a proiectului
+task-manager-copy/
